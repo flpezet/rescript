@@ -16,4 +16,5 @@
     Expected declaration
   [36m/.../fixtures/Iface_field_names_mismatch/Foo.res[0m:[2m1:1-25[0m:
     Actual declaration
-  Fields number 1 have different names, a and x.
+  The field a is named x in the expected declaration.
+  The field b is named y in the expected declaration.

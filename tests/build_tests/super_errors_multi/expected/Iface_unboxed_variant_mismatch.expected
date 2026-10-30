@@ -17,4 +17,4 @@
   [36m/.../fixtures/Iface_unboxed_variant_mismatch/Foo.res[0m:[2m1:1-18[0m:
     Actual declaration
   Their internal representations differ:
-  the second declaration uses unboxed representation.
+  the expected declaration uses unboxed representation.

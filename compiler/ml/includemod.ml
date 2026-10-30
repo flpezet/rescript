@@ -556,7 +556,8 @@ let include_symptom env ppf = function
       "Type declarations do not match" (type_declaration id) d1
       "is not included in" (type_declaration id) d2 show_locs
       (d1.type_loc, d2.type_loc)
-      (Includecore.report_type_mismatch "the first" "the second" "declaration")
+      (Includecore.report_type_mismatch "the actual" "the expected"
+         "declaration")
       errs
   | Extension_constructors (id, x1, x2) ->
     fprintf ppf

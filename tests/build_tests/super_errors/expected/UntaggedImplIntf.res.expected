@@ -27,4 +27,4 @@
   [36m/.../fixtures/UntaggedImplIntf.res[0m:[2m4:3-24[0m:
     Actual declaration
   Their internal representations differ:
-  the second declaration uses unboxed representation.
+  the expected declaration uses unboxed representation.

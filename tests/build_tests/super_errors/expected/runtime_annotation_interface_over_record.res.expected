@@ -24,5 +24,5 @@
   [36m/.../fixtures/runtime_annotation_interface_over_record.res[0m:[2m4:3-19[0m:
     Actual declaration
   Their runtime representations differ:
-  the first declaration states values whose typeof is "object",
-  the second declaration states values whose typeof is "string".
+  the actual declaration states values whose typeof is "object",
+  the expected declaration states values whose typeof is "string".

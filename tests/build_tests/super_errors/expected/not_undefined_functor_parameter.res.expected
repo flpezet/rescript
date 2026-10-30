@@ -25,5 +25,5 @@
   [36m/.../fixtures/not_undefined_functor_parameter.res[0m:[2m9:5-16[0m:
     Actual declaration
   Their runtime representations differ:
-  the second declaration is @notUndefined,
-  but the first declaration can hold undefined.
+  the expected declaration is @notUndefined,
+  but the actual declaration can hold undefined.

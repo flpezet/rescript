@@ -22,3 +22,4 @@
   [36m/.../fixtures/variant_payload_tag_mismatch.res[0m:[2m6:3-56[0m:
     Actual declaration
   The internal representations for case A are not equal.
+  The internal representations for case C are not equal.

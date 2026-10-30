@@ -16,4 +16,4 @@
     Expected declaration
   [36m/.../fixtures/Iface_immediate_mismatch/Foo.res[0m:[2m1:1-15[0m:
     Actual declaration
-  the first is not an immediate type.
+  the actual declaration is not an immediate type.
