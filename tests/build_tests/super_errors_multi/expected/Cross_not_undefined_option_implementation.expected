@@ -12,7 +12,7 @@
   Type declarations do not match:
     type t = option<int>
   is not included in
-    type t
+    @notUndefined type t
   [36m/.../fixtures/Cross_not_undefined_option_implementation/Hidden.resi[0m:[2m1:15-20[0m:
     Expected declaration
   [36m/.../fixtures/Cross_not_undefined_option_implementation/Hidden.res[0m:[2m1:1-20[0m:

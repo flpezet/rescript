@@ -16,9 +16,12 @@
     }
   is not included in
     {
-      type t
+      @typeOf("string") type t
     }
-  Type declarations do not match: type t = {y: int} is not included in type t
+  Type declarations do not match:
+    type t = {y: int}
+  is not included in
+    @typeOf("string") type t
   [36m/.../fixtures/runtime_annotation_interface_over_record.res[0m:[2m2:21-26[0m:
     Expected declaration
   [36m/.../fixtures/runtime_annotation_interface_over_record.res[0m:[2m4:3-19[0m:

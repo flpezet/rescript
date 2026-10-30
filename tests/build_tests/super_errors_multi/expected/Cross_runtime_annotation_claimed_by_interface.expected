@@ -11,7 +11,7 @@
   Type declarations do not match:
     type t = option<string>
   is not included in
-    type t
+    @typeOf("string") type t
   [36m/.../fixtures/Cross_runtime_annotation_claimed_by_interface/Claim.resi[0m:[2m1:19-24[0m:
     Expected declaration
   [36m/.../fixtures/Cross_runtime_annotation_claimed_by_interface/Claim.res[0m:[2m1:1-23[0m:
