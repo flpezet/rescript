@@ -11,8 +11,8 @@
   does not match the interface /.../fixtures/Cross_runtime_annotation_hidden_base/classes.cmi:
   Type declarations do not match:
     @instanceOf("Dog") type dog = private animal
-  is not included in
-    @instanceOf("Dog") type dog = private animal
+  The declarations read the same, but a type they mention is not the same in
+  both.
   [36m/.../fixtures/Cross_runtime_annotation_hidden_base/Classes.resi[0m:[2m2:20-44[0m:
     Expected declaration
   [36m/.../fixtures/Cross_runtime_annotation_hidden_base/Classes.res[0m:[2m2:20-44[0m:

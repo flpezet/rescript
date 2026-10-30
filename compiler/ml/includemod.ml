@@ -552,12 +552,30 @@ let include_symptom env ppf = function
     show_arity_mismatch env ppf d1 d2;
     show_locs ppf (d1.val_loc, d2.val_loc)
   | Type_declarations (id, d1, d2, errs) ->
-    fprintf ppf "@[<v>@[<hv>%s:@;<1 2>%a@ %s@;<1 2>%a@]%a%a@]"
-      "Type declarations do not match" (type_declaration id) d1
-      "is not included in" (type_declaration id) d2 show_locs
-      (d1.type_loc, d2.type_loc)
-      (Includecore.report_type_mismatch "the first" "the second" "declaration")
-      errs
+    (* Declarations can print the same and still differ, e.g. when a type
+       they mention is abstract on one side only: show the text once, so the
+       error does not read as a declaration not including itself. *)
+    if
+      Format.asprintf "%a" (type_declaration id) d1
+      = Format.asprintf "%a" (type_declaration id) d2
+    then
+      fprintf ppf "@[<v>@[<hv>%s:@;<1 2>%a@]@ @[<hov>%a@]%a%a@]"
+        "Type declarations do not match" (type_declaration id) d1
+        Format.pp_print_text
+        "The declarations read the same, but a type they mention is not the \
+         same in both."
+        show_locs (d1.type_loc, d2.type_loc)
+        (Includecore.report_type_mismatch "the first" "the second"
+           "declaration")
+        errs
+    else
+      fprintf ppf "@[<v>@[<hv>%s:@;<1 2>%a@ %s@;<1 2>%a@]%a%a@]"
+        "Type declarations do not match" (type_declaration id) d1
+        "is not included in" (type_declaration id) d2 show_locs
+        (d1.type_loc, d2.type_loc)
+        (Includecore.report_type_mismatch "the first" "the second"
+           "declaration")
+        errs
   | Extension_constructors (id, x1, x2) ->
     fprintf ppf
       "@[<hv 2>Extension declarations do not match:@ %a@;\
